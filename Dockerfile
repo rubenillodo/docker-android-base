@@ -14,5 +14,3 @@ RUN yes | sdkmanager --licenses
 RUN sdkmanager "tools"
 
 WORKDIR /home/android/app
-
-ENTRYPOINT "/bin/bash"

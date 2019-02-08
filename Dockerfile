@@ -8,7 +8,7 @@ RUN wget -q https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
   unzip android-sdk.zip -d android-sdk && \
   rm -f android-sdk.zip
 
-ENV PATH ${PATH}:${ANDROID_SDK_HOME}/tools/bin
+ENV PATH ${PATH}:${ANDROID_SDK_HOME}/tools/bin:${ANDROID_SDK_HOME}/platform-tools
 
 RUN yes | sdkmanager --licenses
 RUN sdkmanager "tools"

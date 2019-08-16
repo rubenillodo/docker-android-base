@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-ENV ANDROID_SDK_HOME /opt/android-sdk
+ENV ANDROID_SDK_ROOT /opt/android-sdk
 ENV ANDROID_HOME /opt/android-sdk
 
 WORKDIR /opt
@@ -8,7 +8,7 @@ RUN wget -q https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
   unzip android-sdk.zip -d android-sdk && \
   rm -f android-sdk.zip
 
-ENV PATH ${PATH}:${ANDROID_SDK_HOME}/tools/bin:${ANDROID_SDK_HOME}/platform-tools
+ENV PATH ${PATH}:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools
 
 RUN yes | sdkmanager --licenses
 RUN sdkmanager "tools"
